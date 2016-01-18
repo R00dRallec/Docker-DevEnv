@@ -12,6 +12,7 @@ sudo apt-get -y install nmon ncdu dstat ccze
 
 # config keyboard layout
 sudo apt-get install keyboard-configuration
+udo dpkg-reconfigure keyboard-configuration
 
 # folders
 rm -rf ~/Documents
