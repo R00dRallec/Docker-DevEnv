@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " own plugins
+Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -39,7 +40,7 @@ filetype plugin indent on    " required
 "       Christian Becker
 "
 " Version: 
-"       0.1 - 2016-01-18
+"       0.11 - 2016-01-27
 "
 " Sections:
 "    -> Plugins
