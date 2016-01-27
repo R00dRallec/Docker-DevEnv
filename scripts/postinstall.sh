@@ -10,10 +10,6 @@ sudo apt-get -y install vim git
 sudo apt-get -y install nmon ncdu dstat ccze
 # Description see: http://www.unixmen.com/10-useful-utilities-linux-users
 
-# config keyboard layout
-sudo apt-get install keyboard-configuration
-sudo dpkg-reconfigure keyboard-configuration
-
 # folders
 rm -rf ~/Documents
 rm -rf ~/Public
@@ -21,20 +17,20 @@ rm -rf ~/Templates
 rm -rf ~/Videos
 rm -rf ~/Music
 rm ~/examples.desktop
-mkdir ~/Development
+mkdir -p ~/Development
+
+# users
+
+pass=$(perl -e 'print crypt($ARGV[0], "password")' dev)
+useradd -m -p '$pass 'dev'
+
+# user specific settings
+su dev
 
 # bash settings
 echo "alias ll='ls -l'" >> ~/.bashrc
 echo "alias la='ls -a'" >> ~/.bashrc
 echo "alias lla='ls -la'" >> ~/.bashrc
-
-## solarized color theme
-# terminal - gnome
-sudo apt-get -y install dconf-cli
-git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git ~/gnome-terminal-colors-solarized
-cd ~/gnome-terminal-colors-solarized
-PROFILE=$(gsettings list-recursively | grep "org.gnome.Terminal.ProfilesList default" | awk '{print $3}')
-./install.sh -s dark -p $PROFILE
 
 # vim coloring
 git clone git://github.com/altercation/vim-colors-solarized.git ~/cloned-bundle
