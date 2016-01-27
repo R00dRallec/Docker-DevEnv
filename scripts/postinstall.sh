@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # basic update
-sudo apt-get -y update
-sudo apt-get -y upgrade
+apt-get -y update
+apt-get -y upgrade
 
 # install apps
-sudo apt-get -y install vim git
+apt-get -y install vim git
 # useful tools
-sudo apt-get -y install nmon ncdu dstat ccze
+apt-get -y install nmon ncdu dstat ccze
 # Description see: http://www.unixmen.com/10-useful-utilities-linux-users
 
 # folders
@@ -22,7 +22,7 @@ mkdir -p ~/Development
 # users
 
 pass=$(perl -e 'print crypt($ARGV[0], "password")' dev)
-useradd -m -p '$pass 'dev'
+useradd -m -p $pass 'dev'
 
 # user specific settings
 su dev
