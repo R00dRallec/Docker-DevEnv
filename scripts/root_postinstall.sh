@@ -44,7 +44,7 @@ echo "set background=dark" >> ~/.vimrc
 echo "colorscheme solarized" >> ~/.vimrc
 
 # invoke vim_install.sh
-sh vim_install.sh
+sh root_vim_install.sh
 
 # Clean up
 rm -rf ~/cloned-bundle
