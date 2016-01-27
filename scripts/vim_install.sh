@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# os installs
-sudo apt-get update
-sudo apt-get install vim -y
-
 # install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -31,4 +27,4 @@ rm -rf ~/fonts
 
 vim +PluginInstall +qall
 
-echo "Done"
+echo "Done Vim Install"
