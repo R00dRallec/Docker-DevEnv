@@ -29,7 +29,7 @@ su -m dev -c echo "set background=dark" >> ~/.vimrc
 su -m dev -c echo "colorscheme solarized" >> ~/.vimrc
 
 # invoke vim_install.sh
-su -m dev -csh vim_install.sh
+su -m dev -c sh vim_install.sh
 
 # Clean up
 su -m dev -c rm -rf ~/cloned-bundle
