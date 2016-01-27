@@ -12,7 +12,7 @@ sudo apt-get -y install nmon ncdu dstat ccze
 
 # config keyboard layout
 sudo apt-get install keyboard-configuration
-udo dpkg-reconfigure keyboard-configuration
+sudo dpkg-reconfigure keyboard-configuration
 
 # folders
 rm -rf ~/Documents
@@ -42,6 +42,9 @@ cp -r ~/cloned-bundle/* ~/.vim/bundle
 echo "syntax enable" >> ~/.vimrc
 echo "set background=dark" >> ~/.vimrc
 echo "colorscheme solarized" >> ~/.vimrc
+
+# invoke vim_install.sh
+sh vim_install.sh
 
 # Clean up
 rm -rf ~/cloned-bundle
